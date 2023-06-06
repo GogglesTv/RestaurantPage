@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: rgb(245, 129, 72);
+}
+
+.call-us {
+  background-color: rgb(0, 225, 255);
+  padding: 15px 30px 15px 30px;
+}
+
+.call-us:hover {
+  color: rgb(245, 129, 72);
+  background-color: white;
+}
+
+div.insta {
+  margin-top: 8rem;
+  margin-bottom: 10px;
+}
