@@ -90,29 +90,29 @@ function tabSelection() {
 }
 
 // Our Story Elements
+ourStoryCard();
 ourStory.addEventListener("click", () => {
   console.log("Story Selected!");
   tabSelection();
   ourStory.style.color = "white";
-  ourStoryCard();
   mainDiv.append(storyDescription);
 });
 
 // Menu Elements
+menuItemsCreator();
 ourMenu.addEventListener("click", () => {
   console.log("Menu Selected!");
   tabSelection();
   ourMenu.style.color = "white";
-  menuItemsCreator();
   mainDiv.append(menuContainer);
 });
 
 // Contact Elements
+contactCardCreator();
 contact.addEventListener("click", () => {
   console.log("Contact Selected!");
   tabSelection();
   contact.style.color = "white";
-  contactCardCreator();
   mainDiv.append(contactsContainer);
 });
 
@@ -120,6 +120,13 @@ address.addEventListener("click", () => {
   console.log("Contact Selected!");
   tabSelection();
   contact.style.color = "white";
-  contactCardCreator();
   mainDiv.append(contactsContainer);
+});
+
+// Back to Home
+restaurantName.addEventListener("click", () => {
+  console.log("Back to the Homepage!");
+  tabSelection();
+  mainSectionElements();
+  container.append(mainSection);
 });
