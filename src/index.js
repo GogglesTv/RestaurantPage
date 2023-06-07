@@ -1,6 +1,8 @@
 console.log("WE ARE LIVE!");
 import "./style.css";
 import { storyDescription, ourStoryCard } from "./story.js";
+import { menuContainer, menuItemsCreator } from "./menu";
+import { contactsContainer, contactCardCreator } from "./contact";
 
 const container = document.getElementById("content");
 container.classList.add("d-flex");
@@ -94,4 +96,30 @@ ourStory.addEventListener("click", () => {
   ourStory.style.color = "white";
   ourStoryCard();
   mainDiv.append(storyDescription);
+});
+
+// Menu Elements
+ourMenu.addEventListener("click", () => {
+  console.log("Menu Selected!");
+  tabSelection();
+  ourMenu.style.color = "white";
+  menuItemsCreator();
+  mainDiv.append(menuContainer);
+});
+
+// Contact Elements
+contact.addEventListener("click", () => {
+  console.log("Contact Selected!");
+  tabSelection();
+  contact.style.color = "white";
+  contactCardCreator();
+  mainDiv.append(contactsContainer);
+});
+
+address.addEventListener("click", () => {
+  console.log("Contact Selected!");
+  tabSelection();
+  contact.style.color = "white";
+  contactCardCreator();
+  mainDiv.append(contactsContainer);
 });
