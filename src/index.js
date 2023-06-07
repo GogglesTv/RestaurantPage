@@ -22,6 +22,7 @@ function sidebarElements() {
   // RESTAURANT NAME
   restaurantName.innerHTML = "FRESH FUEL";
   restaurantName.classList.add("display-1");
+  restaurantName.style.cursor = "pointer";
   sidebar.append(restaurantName);
 
   // SIDEBAR LINKS

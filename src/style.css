@@ -8,6 +8,11 @@
   height: 100vh;
 }
 
+section.sidebar {
+  position: sticky;
+  top: 0px;
+}
+
 .sidebar {
   width: 20%;
   background-color: rgb(245, 129, 72);
@@ -17,19 +22,28 @@
   margin-top: 10rem;
 }
 
+.sidebar-links > div:hover {
+  cursor: pointer;
+  color: white;
+}
+
 .call-us {
   background-color: rgb(0, 225, 255);
   padding: 15px 30px 15px 30px;
 }
 
 .call-us:hover {
-  color: rgb(245, 129, 72);
   background-color: white;
 }
 
 div.insta {
   margin-top: 8rem;
   margin-bottom: 10px;
+}
+
+.addressInfo > p:first-child:hover {
+  color: white;
+  cursor: pointer;
 }
 
 .main-section {
