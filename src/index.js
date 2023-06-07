@@ -1,5 +1,6 @@
 console.log("WE ARE LIVE!");
 import "./style.css";
+import { storyDescription, ourStoryCard } from "./story.js";
 
 const container = document.getElementById("content");
 container.classList.add("d-flex");
@@ -77,3 +78,20 @@ function mainSectionElements() {
 mainSectionElements();
 
 container.append(sidebar, mainSection);
+
+function tabSelection() {
+  mainDiv.innerHTML = "";
+
+  ourStory.style.color = "black";
+  ourMenu.style.color = "black";
+  contact.style.color = "black";
+}
+
+// Our Story Elements
+ourStory.addEventListener("click", () => {
+  console.log("Story Selected!");
+  tabSelection();
+  ourStory.style.color = "white";
+  ourStoryCard();
+  mainDiv.append(storyDescription);
+});
