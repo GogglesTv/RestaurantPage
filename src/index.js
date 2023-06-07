@@ -2,6 +2,9 @@ console.log("WE ARE LIVE!");
 import "./style.css";
 
 const container = document.getElementById("content");
+container.classList.add("d-flex");
+
+// SIDEBAR
 const sidebar = document.createElement("section");
 const restaurantName = document.createElement("div");
 const sidebarLinks = document.createElement("div");
@@ -14,8 +17,7 @@ const addressInfo = document.createElement("div");
 const address = document.createElement("p");
 
 function sidebarElements() {
-  // SIDEBAR
-  sidebar.classList.add("sidebar", "text-center");
+  sidebar.classList.add("sidebar", "text-center", "pt-3");
 
   // RESTAURANT NAME
   restaurantName.innerHTML = "FRESH FUEL";
@@ -24,12 +26,18 @@ function sidebarElements() {
 
   // SIDEBAR LINKS
   sidebar.append(sidebarLinks);
-  sidebarLinks.classList.add("fs-3", "mt-5");
+  sidebarLinks.classList.add("fs-3", "sidebar-links");
+
+  ourStory.classList.add("mb-4");
   ourStory.innerHTML = "OUR STORY";
+
+  ourMenu.classList.add("mb-4");
   ourMenu.innerHTML = "OUR MENU";
+
+  contact.classList.add("mb-4");
   contact.innerHTML = "CONTACT";
 
-  callUs.classList.add("btn", "btn-sm", "border-0", "mt-5");
+  callUs.classList.add("btn", "border-0", "mt-5", "pt-5");
   const callUsPara = document.createElement("p");
   callUs.append(callUsPara);
   callUsPara.classList.add("call-us", "fs-4");
@@ -48,4 +56,23 @@ function sidebarElements() {
 }
 sidebarElements();
 
-container.append(sidebar);
+// MAIN SECTION
+const mainSection = document.createElement("section");
+const mainDiv = document.createElement("div");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+
+function mainSectionElements() {
+  mainSection.classList.add("main-section");
+  mainDiv.classList.add("main-div");
+  para1.innerHTML = "COME MAKE YOUR TEMPLE HAPPY";
+  para1.classList.add("happy-temple", "m-0");
+  para2.innerHTML =
+    "GOOD FUEL MAKES THE BODY STRONG. A STRONG BODY IS A HEALTHY BODY.";
+  para2.classList.add("good-fuel");
+  mainDiv.append(para1, para2);
+  mainSection.append(mainDiv);
+}
+mainSectionElements();
+
+container.append(sidebar, mainSection);

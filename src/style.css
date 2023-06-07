@@ -4,9 +4,17 @@
   font-family: "Bebas Neue", sans-serif;
 }
 
+#content {
+  height: 100vh;
+}
+
 .sidebar {
   width: 20%;
   background-color: rgb(245, 129, 72);
+}
+
+.sidebar-links {
+  margin-top: 10rem;
 }
 
 .call-us {
@@ -22,4 +30,31 @@
 div.insta {
   margin-top: 8rem;
   margin-bottom: 10px;
+}
+
+.main-section {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(127, 255, 212, 0.5);
+}
+
+.happy-temple {
+  font-size: 100px;
+  letter-spacing: 5px;
+}
+
+.good-fuel {
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  letter-spacing: 2.5px;
+  margin-top: -20px;
 }
