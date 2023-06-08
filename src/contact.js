@@ -4,6 +4,11 @@ contactsContainer.classList.add(
   "flex-wrap",
   "justify-content-center"
 );
+const contactHeader = document.createElement("h1");
+contactHeader.innerHTML = "Locations and Contact Information";
+contactHeader.classList.add("mb-5", "pt-5", "text-center");
+contactHeader.style.width = "100%";
+contactsContainer.append(contactHeader);
 
 function contactCardCreator() {
   const cityStates = [
