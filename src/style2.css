@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+
+body {
+  width: 100%;
+}
+
+#container {
+  height: 100vh;
+}
+
+.navbar {
+  height: 10vh;
+  background-color: #172554;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  position: sticky;
+}
+
+.restaurantName {
+  color: rgb(255, 34, 34);
+  font-size: 38px;
+}
+
+.restaurantName:hover {
+  cursor: pointer;
+}
+
+.navbar-links {
+  color: #fef9c3;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.navbar-links > div:first-child {
+  color: rgb(255, 34, 34);
+}
+
+.navbar-links > div {
+  transition: 0.3s ease-out;
+}
+
+.navbar-links > div:hover {
+  cursor: pointer;
+  color: rgb(255, 34, 34);
+}
+
+.navbar-links > div:first-child,
+.navbar-links > div:nth-child(2) {
+  margin-right: 5%;
+}
+
+.main-section {
+  min-height: 90vh;
+  background: linear-gradient(
+      0deg,
+      rgba(50, 10, 34, 0.5),
+      rgba(37, 10, 26, 0.3)
+    ),
+    url(../Images/brooke-lark-aGjP08-HbYY-unsplash.jpeg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.phrase-containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fef9c3;
+}
+
+.phrase1 {
+  font-size: 6.5rem;
+  width: 55rem;
+  line-height: 5.5rem;
+  text-align: center;
+}
+
+.phrase2 {
+  font-size: 2rem;
+  width: 50rem;
+  text-align: center;
+}
+
+.order-now {
+  font-size: 24px;
+  height: 60px;
+  width: 150px;
+  color: white;
+  background-color: rgb(207, 49, 49);
+  border: 0;
+  border-radius: 25px;
+  margin-top: 15px;
+  transition: background-color 0.7s ease-out;
+}
+
+.order-now:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.store-info {
+  margin-top: 50px;
+  color: white;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+}
+
+.address-container {
+  margin-bottom: 50px;
+}
+
+.address-container,
+.time-container,
+.phone-container,
+.mail-container {
+  display: flex;
+}
+
+.location-logo,
+.time-logo,
+.phone-logo,
+.mail-logo {
+  margin-right: 20px;
+  color: #e11d48;
+}
+
+.address-info,
+.time-info {
+  font-size: 24px;
+}
+
+/* MENU STYLES */
+.menu-container,
+.contact-container {
+  min-height: 90vh;
+  background-color: #fef3c7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.menu-header,
+.contact-header {
+  font-size: 38px;
+  margin: 30px 0px;
+}
+
+.menu-items-container,
+.form-container {
+  background-color: #fda4af;
+  width: 60%;
+  border-radius: 20px;
+  padding: calc(2rem + 2vw);
+}
+
+.menu-item img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.menu-item {
+  display: flex;
+  width: 100%;
+}
+
+.item-content {
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.menu-item h4 {
+  width: 100%;
+  margin-right: auto;
+  font-size: calc(0.7rem + 0.5vw);
+  border-bottom: 2px dashed black;
+}
+
+.item-content span {
+  font-size: calc(0.7rem + 0.5vw);
+  float: right;
+  color: #e11d48;
+}
+
+.item-description {
+  margin-top: 15px;
+  font-size: calc(0.7rem + 0.5vw);
+}
+
+/* CONTACT SECTION */
+.underline {
+  border-bottom: 3px solid red;
+  position: absolute;
+  right: 38%;
+  left: 38%;
+  bottom: 46.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 60%;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid black;
+  background-color: #fda4af;
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+input[for="message"] {
+  padding-bottom: 40px;
+}
+
+input[type="submit"] {
+  font-size: 22px;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #e11d48;
+  border-bottom: 0;
+  margin: 15px 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.floating-label-group:first-child {
+  margin-top: -5px;
+}
+
+.floating-label-group {
+  position: relative;
+  margin: 10px 0;
+}
+
+.floating-label {
+  font-size: 20px;
+  color: #6a6868;
+  position: absolute;
+  pointer-events: none;
+  top: 35px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+input[for="message"] {
+  padding-bottom: 30px;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: 15px;
+  bottom: 0px;
+  left: 0px;
+  font-size: 15px;
+  opacity: 1;
+  color: #e11d48;
+}
+
+iframe {
+  width: 100%;
+}
