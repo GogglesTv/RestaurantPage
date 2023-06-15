@@ -17,6 +17,8 @@ const navBarLinks = document.createElement("section");
 navBarLinks.classList.add("navbar-links");
 navBar.append(navBarLinks);
 
+let tabIndicator;
+
 const home = document.createElement("div");
 home.innerHTML = "Home";
 const menu = document.createElement("div");
@@ -86,47 +88,46 @@ mainSectionContainer.append(mainPage);
 container.append(navBar, mainSectionContainer);
 
 home.addEventListener("click", () => {
-  home.style.color === "rgb(255, 34, 34)";
-  mainSectionContainer.innerHTML = "";
+  tabIndicator = "home";
   tabSwitch();
+  mainSectionContainer.innerHTML = "";
   mainSectionContainer.append(mainPage);
 });
 
 orderNow.addEventListener("click", () => {
-  menu.style.color = "rgb(255, 34, 34)";
-  mainSectionContainer.innerHTML = "";
+  tabIndicator = "menu";
   tabSwitch();
+  mainSectionContainer.innerHTML = "";
   mainSectionContainer.append(menuContainer);
 });
 
 menuCreator();
 menu.addEventListener("click", () => {
-  menu.style.color = "rgb(255, 34, 34)";
-  mainSectionContainer.innerHTML = "";
+  tabIndicator = "menu";
   tabSwitch();
+  mainSectionContainer.innerHTML = "";
   mainSectionContainer.append(menuContainer);
 });
 
 contactForm();
 contactUs.addEventListener("click", () => {
-  contactUs.style.color = "rgb(255, 34, 34)";
-  mainSectionContainer.innerHTML = "";
+  tabIndicator = "contact-us";
   tabSwitch();
+  mainSectionContainer.innerHTML = "";
   mainSectionContainer.append(contactContainer);
 });
 
 function tabSwitch() {
-  if (home.style.color === "rgb(255, 34, 34)") {
+  if (tabIndicator === "home") {
+    home.style.color = "rgb(255, 34, 34)";
     menu.style.color = "#fef9c3";
     contactUs.style.color = "#fef9c3";
-  }
-
-  if (menu.style.color === "rgb(255, 34, 34)") {
+  } else if (tabIndicator === "menu") {
+    menu.style.color = "rgb(255, 34, 34)";
     home.style.color = "#fef9c3";
     contactUs.style.color = "#fef9c3";
-  }
-
-  if (contactUs.style.color === "rgb(255, 34, 34)") {
+  } else if (tabIndicator === "contact-us") {
+    contactUs.style.color = "rgb(255, 34, 34)";
     home.style.color = "#fef9c3";
     menu.style.color = "#fef9c3";
   }

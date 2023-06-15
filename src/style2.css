@@ -48,11 +48,11 @@ body {
 }
 
 .navbar-links > div {
+  cursor: pointer;
   transition: 0.3s ease-out;
 }
 
-.navbar-links > div:hover {
-  cursor: pointer;
+section.navbar-links > div:hover {
   color: rgb(255, 34, 34);
 }
 
@@ -146,6 +146,11 @@ body {
 }
 
 /* MENU STYLES */
+h1.menu-header,
+h1.contact-header {
+  border-bottom: 3px solid red;
+}
+
 .menu-container,
 .contact-container {
   min-height: 90vh;
@@ -205,14 +210,6 @@ body {
 }
 
 /* CONTACT SECTION */
-.underline {
-  border-bottom: 3px solid red;
-  position: absolute;
-  right: 38%;
-  left: 38%;
-  bottom: 46.5rem;
-}
-
 form {
   display: flex;
   flex-direction: column;
